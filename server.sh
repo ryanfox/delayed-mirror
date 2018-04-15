@@ -1,0 +1,1 @@
+raspivid -n -w 640 -h 360 -t 0 -o - | cvlc -vvv stream:///dev/stdin --sout '#rtp{sdp=rtsp://127.0.0.1:8554/}' --sout-rtp-caching=27000 :demux=h264
